@@ -18,7 +18,7 @@ function Update () {
 	var control_angle:float = Mathf.Atan2(y_move, x_move) + 1.5;
 	var angle:float = cam_angle+control_angle;
 	
-	var strength:float = Mathf.Sqrt(x_move * x_move + y_move * y_move);
+	var strength:float = Mathf.Sqrt(x_move * x_move + y_move * y_move) /10;
 	//rigidbody.AddForce(Vector3.up * 20, ForceMode.VelocityChange);
 	rigidbody.transform.Translate(new Vector3(-Mathf.Sin(angle)*strength, 0, -Mathf.Cos(angle)*strength));	
 	
@@ -26,6 +26,5 @@ function Update () {
 }
 public function Jump(strength:float)
 {
-Debug.Log("JUMP:"+strength);
 	rigidbody.AddForce(Vector3.up * strength, ForceMode.VelocityChange);
 }

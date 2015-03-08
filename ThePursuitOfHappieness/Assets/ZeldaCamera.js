@@ -2,10 +2,10 @@
 public var target:GameObject;
 public var pitch:float = 0;
 public var yaw:float = 0;
-public var maxRadius:float = 100;
-private var radius:float = maxRadius;
+public var maxRadius:float;
+private var radius:float;
 function Start () {
-
+	radius = maxRadius;
 }
 
 function Update () {
@@ -16,5 +16,5 @@ function Update () {
 	);
 	transform.position = pos;
 	yaw += Input.GetAxis("JoystickRightVertical") / 30;
-	pitch += Input.GetAxis("JoystickRightHorizontal") / 30;
+	pitch -= Input.GetAxis("JoystickRightHorizontal") / 30;
 }

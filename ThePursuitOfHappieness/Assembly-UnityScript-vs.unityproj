@@ -50,6 +50,7 @@
      <Compile Include="Assets\ZeldaCamera.js" />
      <Compile Include="Assets\ZeldaMovement.js" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>C:/Users/Colin/UnityPrototyping/ThePursuitOfHappieness/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
