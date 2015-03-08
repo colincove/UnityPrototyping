@@ -1,0 +1,54 @@
+Initialize engine version: 4.5.4f1 (e036f44c54c9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
+    Vendor:   Intel
+    VRAM:     0 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Colin\UnityPrototyping\ThePursuitOfHappieness\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Colin\UnityPrototyping\ThePursuitOfHappieness\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Colin\UnityPrototyping\ThePursuitOfHappieness\test_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Colin\UnityPrototyping\ThePursuitOfHappieness\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Colin\UnityPrototyping\ThePursuitOfHappieness\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Colin\UnityPrototyping\ThePursuitOfHappieness\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.095 seconds
+desktop: 2160x1440 59Hz; virtual: 2160x1440 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+ON TRIGGER EXIT
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at JumpTrigger.OnTriggerExit (System.Object other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ON TRIGGER EXIT
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at JumpTrigger.OnTriggerExit (System.Object other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ON TRIGGER EXIT
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at JumpTrigger.OnTriggerExit (System.Object other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ON TRIGGER EXIT
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at JumpTrigger.OnTriggerExit (System.Object other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+

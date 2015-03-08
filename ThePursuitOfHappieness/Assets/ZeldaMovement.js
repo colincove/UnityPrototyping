@@ -26,5 +26,5 @@ function Update () {
 }
 public function Jump(strength:float)
 {
-	rigidbody.AddForce(Vector3.up * strength, ForceMode.VelocityChange);
+	//rigidbody.AddForce(Vector3.up * strength, ForceMode.VelocityChange);
 }
