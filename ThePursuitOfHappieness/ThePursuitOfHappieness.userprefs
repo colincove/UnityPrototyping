@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ZeldaCamera.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ZeldaMovement.js">
     <Files>
-      <File FileName="Assets\ZeldaMovement.js" Line="15" Column="2" />
+      <File FileName="Assets\ZeldaMovement.js" Line="32" Column="2" />
       <File FileName="Assets\ZeldaCamera.js" Line="22" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
