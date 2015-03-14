@@ -6,10 +6,15 @@ private var stride:boolean = false;
 private var speed:float = 0;
 public var maxRunSpeed:float = 5;
 public var maxWalkSpeed:float = 2.5;
-public var friction:float = 1.05;
+public var friction:float = 1.20;
+public var stopFriction:float = 1.05;
 private var bodyAngle:Vector3 = new Vector3(0, 0, 0);
 private var angleVector:Vector3 = new Vector3(0, 0, 0);
-
+private var flipping:boolean = false;
+private var prev_control_vector:Vector3 = new Vector3();
+private var control_vector_delta:float;
+private var prev_control_vector_delta:float;
+private var control_angle_delta:float;
 function Start () {
 
 }
@@ -25,6 +30,15 @@ function Update () {
 
 	var control_angle:float = Mathf.Atan2(y_move, x_move) + 1.5;
 	var control_vector:float = Mathf.Sqrt(x_move * x_move + y_move * y_move);
+	var control_angle_vector:Vector3 = new Vector3(x_move, 0, y_move);
+	if(prev_control_vector !=null)
+	{
+		control_angle_delta = Vector3.Angle(control_angle_vector, prev_control_vector);
+	}
+	control_vector_delta = Mathf.Abs(prev_control_vector_delta - control_vector);
+	prev_control_vector_delta = control_vector;
+	prev_control_vector = control_angle_vector;
+	Debug.Log(control_angle_delta);
 	
 	var angle:float = cam_angle+control_angle;
 	angleVector.Set(Mathf.Cos(angle), 0, Mathf.Sin(angle));
@@ -43,7 +57,7 @@ function Update () {
 	var vel:float = 0;
 	if(running)
 	{
-		vel = control_vector/20;
+		//vel = control_vector/20;
 		if(speed>maxRunSpeed / friction) 
 		{
 			speed = maxRunSpeed;
@@ -53,7 +67,7 @@ function Update () {
 	}
 	else if(walking)
 	{
-		vel = control_vector/50;
+		//vel = control_vector/50;
 		if(speed>maxWalkSpeed) 
 		{
 			
@@ -79,18 +93,43 @@ function Update () {
 	{
 		stride = false;
 	}
+	if(!turning) vel = (control_vector - walkRange) / 20;
 	var targetDir:Vector3 = bodyAngle - angleVector;
     var forward:Vector3 = transform.forward;
     var a:float = Vector3.Angle(bodyAngle, angleVector);
+    
     if (a < 10F || stride)
     {
-    	speed += vel;
+    	//speed += vel;
+    	speed = vel*40;
+    }
+    
+    if (a < 5F)
+    {
+    	flipping = false;
+    }
+    
+    
+    /*if(a>150 && !stride)
+    {
+    	flipping = true;
+    }*/
+  	//if(control_vector_delta > 0.5 
+    
+    if(flipping)
+    {
+    	slerpSpeed = 0.4;
+    	//speed=0;
+    	//bodyAngle = angleVector;
     }
             
+	if(control_vector < turnRange)
+	{
+		speed= speed / stopFriction;
+	}
 	
 	speed = (speed) / friction;
 	bodyAngle = Vector3.Slerp(bodyAngle, angleVector, slerpSpeed);
-	Debug.Log(walking);
 	
 	
 	
