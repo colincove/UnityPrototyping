@@ -46,9 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\GravityShift.js" />
      <Compile Include="Assets\JumpTrigger.js" />
+     <Compile Include="Assets\KeepDown.js" />
      <Compile Include="Assets\ZeldaCamera.js" />
      <Compile Include="Assets\ZeldaMovement.js" />
+     <Compile Include="Assets\ZeldaStateMachine.js" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">

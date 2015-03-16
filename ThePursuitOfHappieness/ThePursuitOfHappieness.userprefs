@@ -2,8 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ZeldaMovement.js">
     <Files>
-      <File FileName="Assets\ZeldaMovement.js" Line="32" Column="2" />
-      <File FileName="Assets\ZeldaCamera.js" Line="22" Column="32" />
+      <File FileName="Assets\JumpTrigger.js" Line="21" Column="3" />
+      <File FileName="Assets\ZeldaStateMachine.js" Line="3" Column="56" />
+      <File FileName="Assets\ZeldaMovement.js" Line="147" Column="2" />
+      <File FileName="Assets\GravityShift.js" Line="10" Column="35" />
+      <File FileName="Assets\KeepDown.js" Line="10" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -15,11 +15,18 @@ private var prev_control_vector:Vector3 = new Vector3();
 private var control_vector_delta:float;
 private var prev_control_vector_delta:float;
 private var control_angle_delta:float;
+public var stateMachine:ZeldaStateMachine;
 function Start () {
 
 }
 
 function Update () {
+
+	if(stateMachine.currentState != States.Idle && stateMachine.currentState != States.Walking)
+	{
+		return;
+	}
+	
 	x_move = Input.GetAxis("JoystickLeftHorizontal"); 
 	y_move = Input.GetAxis("JoystickLeftVertical"); 
 	
@@ -38,7 +45,6 @@ function Update () {
 	control_vector_delta = Mathf.Abs(prev_control_vector_delta - control_vector);
 	prev_control_vector_delta = control_vector;
 	prev_control_vector = control_angle_vector;
-	Debug.Log(control_angle_delta);
 	
 	var angle:float = cam_angle+control_angle;
 	angleVector.Set(Mathf.Cos(angle), 0, Mathf.Sin(angle));
@@ -148,8 +154,25 @@ function Update () {
 	//rigidbody.transform.rotation = q;
 	rigidbody.velocity = transform.forward * (speed * 5);
 	rigidbody.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(bodyAngle.z, bodyAngle.x)/(Mathf.PI/180)+180, Vector3.up);
+	
+	if(running || walking)
+	{
+		stateMachine.ChangeState(States.Walking);
+	}
+	else
+	{
+		stateMachine.ChangeState(States.Idle);
+	}
 }
 public function Jump(strength:float)
 {
-	//rigidbody.AddForce(Vector3.up * strength, ForceMode.VelocityChange);
+	stateMachine.ChangeState(States.Jumping);
+	rigidbody.AddForce(Vector3.up * strength + transform.forward * strength, ForceMode.VelocityChange);
+}
+function OnCollisionEnter(collision:Collision)
+{
+	if(stateMachine.currentState == States.Jumping && collision.other.tag == "Ground")
+	{
+		stateMachine.ChangeState(States.Idle);
+	}
 }
