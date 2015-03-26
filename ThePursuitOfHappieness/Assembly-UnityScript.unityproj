@@ -49,6 +49,7 @@
      <Compile Include="Assets\GravityShift.js" />
      <Compile Include="Assets\JumpTrigger.js" />
      <Compile Include="Assets\KeepDown.js" />
+     <Compile Include="Assets\WindForce.js" />
      <Compile Include="Assets\ZeldaCamera.js" />
      <Compile Include="Assets\ZeldaMovement.js" />
      <Compile Include="Assets\ZeldaStateMachine.js" />

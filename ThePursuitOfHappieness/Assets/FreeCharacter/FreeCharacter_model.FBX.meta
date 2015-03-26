@@ -112,14 +112,19 @@ ModelImporter:
     2300000: NPC_Beard_008
     2300002: NPC_Hair_009
     2300004: NPC_Tools_Axe_004
+    2300006: NPC_Bag_006
+    2300008: NPC_Man_Normal001
     3300000: NPC_Beard_008
     3300002: NPC_Hair_009
     3300004: NPC_Tools_Axe_004
+    3300006: NPC_Bag_006
+    3300008: NPC_Man_Normal001
     4300000: NPC_Hair_009
     4300002: NPC_Beard_008
     4300004: NPC_Tools_Axe_004
     4300006: NPC_Man_Normal001
     4300008: NPC_Bag_006
+    7400000: Take 001
     9500000: //RootNode
     11100000: //RootNode
     13700000: NPC_Bag_006

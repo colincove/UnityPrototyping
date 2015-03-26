@@ -16,8 +16,9 @@ private var control_vector_delta:float;
 private var prev_control_vector_delta:float;
 private var control_angle_delta:float;
 public var stateMachine:ZeldaStateMachine;
+private var anim:Animator;
 function Start () {
-
+	anim = gameObject.GetComponent(Animator);
 }
 
 function Update () {
@@ -152,6 +153,7 @@ function Update () {
 	//rigidbody.AddRelativeForce(transform.forward * speed, ForceMode.Impulse);
 	//var  q:Quaternion = Quaternion.LookRotation(new Vector3(rigidbody.transform.rotation.x, Mathf.Atan2(bodyAngle.y, bodyAngle.x), rigidbody.transform.rotation.z));
 	//rigidbody.transform.rotation = q;
+	anim.SetFloat("speed", speed);
 	rigidbody.velocity = transform.forward * (speed * 5);
 	rigidbody.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(bodyAngle.z, bodyAngle.x)/(Mathf.PI/180)+180, Vector3.up);
 	
