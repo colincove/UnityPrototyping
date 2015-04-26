@@ -7,6 +7,7 @@ public var radiusWindow:float = 0.5f;
 private var r:float;
 public var pitchCeiling:int = 45;
 public var pitchFloor:int = -20;
+public var damp:float = 20;
 function Start () {
 }
 
@@ -25,8 +26,8 @@ function Update ()
 		target.transform.position.z+ r *Mathf.Cos(p) * Mathf.Sin(yaw)
 	);
 	transform.position = pos;
-	pitch += Input.GetAxis("JoystickRightVertical") / 30;
-	yaw -= Input.GetAxis("JoystickRightHorizontal") / 30;
+	pitch += Input.GetAxis("JoystickRightVertical") / damp;
+	yaw -= Input.GetAxis("JoystickRightHorizontal") / damp;
 	
 	if(pitch > pitchCeiling *(Mathf.PI/180))
 	{

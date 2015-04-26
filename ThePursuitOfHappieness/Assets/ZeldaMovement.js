@@ -23,6 +23,8 @@ function Start () {
 
 function Update () {
 
+	//
+
 	if(stateMachine.currentState != States.Idle && stateMachine.currentState != States.Walking)
 	{
 		return;
@@ -169,6 +171,8 @@ function Update () {
 public function Jump(strength:float)
 {
 	stateMachine.ChangeState(States.Jumping);
+	transform.position = transform.position + Vector3.up * 0.5;
+	rigidbody.velocity = Vector3.zero;
 	rigidbody.AddForce(Vector3.up * strength + transform.forward * strength, ForceMode.VelocityChange);
 }
 function OnCollisionEnter(collision:Collision)
@@ -177,4 +181,16 @@ function OnCollisionEnter(collision:Collision)
 	{
 		stateMachine.ChangeState(States.Idle);
 	}
+}
+function UpdateState(state:States)
+{
+	if(state == States.Jumping)
+	{
+		rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
+	}
+	else
+	{
+		rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+	}
+	//rigidbody.freezeRotation = state == States.Jumping;
 }
