@@ -2,6 +2,7 @@
 
 enum States{Idle, Walking, Falling, Jumping, Climbing};
 public var currentState:States;
+public var oldState:States;
 function Start () 
 {
 	currentState = States.Idle;
@@ -16,6 +17,7 @@ function ChangeState(state:States)
 	{
 		return;
 	}
+	oldState = currentState;
 	currentState = state;
 	SendMessage("UpdateState", state);
 }
