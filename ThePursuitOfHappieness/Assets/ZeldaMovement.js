@@ -177,7 +177,7 @@ public function Jump(strength:float)
 }
 function OnCollisionEnter(collision:Collision)
 {
-	if(stateMachine.currentState == States.Jumping && collision.other.tag == "Ground")
+	if(stateMachine.currentState == States.Jumping && (collision.other.tag == "Ground" || collision.other.tag == "Bridge"))
 	{
 		stateMachine.ChangeState(States.Idle);
 	}

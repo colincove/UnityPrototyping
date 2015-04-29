@@ -1,14 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ZeldaCamera.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ZeldaAudioController.js">
     <Files>
-      <File FileName="Assets\ZeldaMovement.js" Line="20" Column="20" />
-      <File FileName="Assets\ZeldaAudioController.js" Line="20" Column="2" />
+      <File FileName="Assets\ZeldaAudioController.js" Line="5" Column="35" />
+      <File FileName="Assets\GravityShift.js" Line="1" Column="1" />
+      <File FileName="Assets\ZeldaMovement.js" Line="8" Column="37" />
       <File FileName="Assets\JumpTrigger.js" Line="1" Column="1" />
       <File FileName="Assets\ZeldaStateMachine.js" Line="1" Column="1" />
-      <File FileName="Assets\GravityShift.js" Line="1" Column="1" />
       <File FileName="Assets\KeepDown.js" Line="1" Column="1" />
-      <File FileName="Assets\ZeldaCamera.js" Line="17" Column="21" />
+      <File FileName="Assets\ZeldaCamera.js" Line="1" Column="1" />
+      <File FileName="Assets\CameraMovement.js" Line="1" Column="1" />
+      <File FileName="Assets\WindForce.js" Line="1" Column="1" />
+      <File FileName="Assets\BridgeAudioController.js" Line="9" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

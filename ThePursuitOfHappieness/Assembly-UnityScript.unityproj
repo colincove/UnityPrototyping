@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BridgeAudioController.js" />
      <Compile Include="Assets\CameraMovement.js" />
      <Compile Include="Assets\GravityShift.js" />
      <Compile Include="Assets\JumpTrigger.js" />
