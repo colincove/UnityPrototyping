@@ -156,7 +156,9 @@ function Update () {
 	//var  q:Quaternion = Quaternion.LookRotation(new Vector3(rigidbody.transform.rotation.x, Mathf.Atan2(bodyAngle.y, bodyAngle.x), rigidbody.transform.rotation.z));
 	//rigidbody.transform.rotation = q;
 	anim.SetFloat("speed", speed);
-	rigidbody.velocity = transform.forward * (speed * 5);
+	var newVel:Vector3 = (transform.forward * (speed * 5));//override Z and X movement
+	newVel.y = rigidbody.velocity.y;//retain gravity values
+	rigidbody.velocity =  newVel;
 	rigidbody.transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(bodyAngle.z, bodyAngle.x)/(Mathf.PI/180)+180, Vector3.up);
 	
 	if(running || walking)

@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-enum States{Idle, Walking, Falling, Jumping, Climbing};
+enum States{Idle, Walking, Falling, Jumping, Climbing, Grabbing, Pushing};
 public var currentState:States;
 public var oldState:States;
 function Start () 

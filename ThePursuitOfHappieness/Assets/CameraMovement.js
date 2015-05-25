@@ -15,3 +15,8 @@ function Update () {
 	step = Quaternion.Angle(transform.rotation, target.transform.rotation) / damp;
 	transform.rotation = Quaternion.RotateTowards(transform.rotation, target.transform.rotation, step);
 }
+function ChangeTarget(newTarget:GameObject):void
+
+{
+	target = newTarget;
+}

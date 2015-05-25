@@ -48,10 +48,20 @@
   <ItemGroup>
      <Compile Include="Assets\BridgeAudioController.js" />
      <Compile Include="Assets\CameraMovement.js" />
+     <Compile Include="Assets\ColliderTrigger.js" />
+     <Compile Include="Assets\DirtController.js" />
+     <Compile Include="Assets\DrawBridgeController.js" />
      <Compile Include="Assets\GravityShift.js" />
      <Compile Include="Assets\JumpTrigger.js" />
      <Compile Include="Assets\KeepDown.js" />
+     <Compile Include="Assets\PositionTriggered.js" />
+     <Compile Include="Assets\RotationTriggered.js" />
+     <Compile Include="Assets\Trigger.js" />
+     <Compile Include="Assets\TurbineController.js" />
+     <Compile Include="Assets\WindController.js" />
      <Compile Include="Assets\WindForce.js" />
+     <Compile Include="Assets\WindTrigger.js" />
+     <Compile Include="Assets\WindmillController.js" />
      <Compile Include="Assets\ZeldaAudioController.js" />
      <Compile Include="Assets\ZeldaCamera.js" />
      <Compile Include="Assets\ZeldaMovement.js" />
