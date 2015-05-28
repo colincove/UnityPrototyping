@@ -61,6 +61,7 @@
      <Compile Include="Assets\WindController.js" />
      <Compile Include="Assets\WindForce.js" />
      <Compile Include="Assets\WindTrigger.js" />
+     <Compile Include="Assets\WindmillAudioController.js" />
      <Compile Include="Assets\WindmillController.js" />
      <Compile Include="Assets\ZeldaAudioController.js" />
      <Compile Include="Assets\ZeldaCamera.js" />
@@ -69,7 +70,7 @@
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Colin/UnityPrototyping/ThePursuitOfHappieness/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Colin/dup/UnityPrototyping/ThePursuitOfHappieness/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

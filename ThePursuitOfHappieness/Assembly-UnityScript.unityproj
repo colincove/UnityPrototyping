@@ -61,6 +61,7 @@
      <Compile Include="Assets\WindController.js" />
      <Compile Include="Assets\WindForce.js" />
      <Compile Include="Assets\WindTrigger.js" />
+     <Compile Include="Assets\WindmillAudioController.js" />
      <Compile Include="Assets\WindmillController.js" />
      <Compile Include="Assets\ZeldaAudioController.js" />
      <Compile Include="Assets\ZeldaCamera.js" />

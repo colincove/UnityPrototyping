@@ -97,6 +97,11 @@ private function setState(state:WindmillStates):void
 	_state = state;
 }
 
+public function GetState():WindmillStates
+{
+	return _state;
+}
+
 function OnTriggered(active:boolean):void
 {
 	setState(active ? WindmillStates.TouchActive:WindmillStates.Idle);

@@ -39,6 +39,10 @@ function Update ()
 	turbine.transform.eulerAngles.z += vel;
 	vel = vel / fric;
 }
+public function IsTurning():boolean
+{
+	return _turning;
+}
 function OnTrigger(active:boolean):void
 {
 }
