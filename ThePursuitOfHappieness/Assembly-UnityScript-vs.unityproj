@@ -57,6 +57,7 @@
      <Compile Include="Assets\PositionTriggered.js" />
      <Compile Include="Assets\RotationTriggered.js" />
      <Compile Include="Assets\Trigger.js" />
+     <Compile Include="Assets\TriggeredAudioController.js" />
      <Compile Include="Assets\TurbineController.js" />
      <Compile Include="Assets\WindController.js" />
      <Compile Include="Assets\WindForce.js" />

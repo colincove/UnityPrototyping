@@ -19,7 +19,11 @@ function Update () {
 	{
 		if(!rotarSource.isPlaying)
 		{
-			playSoundFromList(rotateSounds, rotarSource);
+			if(Input.GetAxis("JoystickLeftVertical") != 0)
+			{
+				playSoundFromList(rotateSounds, rotarSource);
+			}
+			
 		}
 	}
 	if(_turbineController.IsTurning() && !audioSource.isPlaying)
