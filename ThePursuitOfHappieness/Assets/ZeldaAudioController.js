@@ -9,22 +9,26 @@ public var landingSounds:AudioClip[];
 public var landingSoundsWood:AudioClip[];
 public var stateMachine:ZeldaStateMachine;
 public var groundTag:String;
-function Start () {
+function Start () 
+{
 
 }
 
 function Update () {
-
+	if (stateMachine.currentState != States.Walking && woodRustleSource.isPlaying)
+	{
+		woodRustleSource.Stop();
+	}
 }
 function TakeStep()
 {
 	if(stateMachine.currentState != States.Walking) return;
 	playSoundFromList(groundTag == "Ground" ? stepSounds:stepSoundsWood, audioSource);
-	//if(!woodRustleSource.isPlaying)
-	//{
-		playSoundFromList(woodRustleSound, woodRustleSource);
-	//}
 	
+	if(!woodRustleSource.isPlaying)
+	{
+		 playSoundFromList(woodRustleSound, woodRustleSource);
+	}
 }
 function UpdateState(state:States)
 {

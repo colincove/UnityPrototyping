@@ -4,9 +4,10 @@ public var windClips:AudioClip[];
 public var moveSounds:AudioClip[];
 private var playingAudio:boolean;
 private var volume:float = 1f;
+private var maxVolume:float;
 private var audioFriction:float = 1.005;
 function Start () {
-
+	maxVolume = audioSource.volume;
 }
 
 function Update () {
@@ -21,13 +22,13 @@ function Update () {
 	}
 	else if(playingAudio)
 	{
-		if(volume < 1) 
+		if(volume < maxVolume) 
 		{
 			volume = volume * audioFriction;
 		}
 		else
 		{
-			volume = 1;
+			volume = maxVolume;
 		}
 	}
 	

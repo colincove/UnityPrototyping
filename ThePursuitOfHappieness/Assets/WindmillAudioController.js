@@ -23,22 +23,36 @@ function Update () {
 			{
 				playSoundFromList(rotateSounds, rotarSource);
 			}
-			
+			else if(rotarSource.isPlaying)
+			{
+				rotarSource.Stop();	
+			}
 		}
+	}
+	else if(rotarSource.isPlaying)
+	{
+		rotarSource.Stop();	
 	}
 	if(_turbineController.IsTurning() && !audioSource.isPlaying)
 	{
 		audioSource.Play();
-		_sailSource.Play();
 	}
 	if(!_turbineController.IsTurning() && audioSource.isPlaying)
 	{
 		audioSource.Stop();
+	}
+	if(!_turbineController.IsTurning() && !_sailSource.isPlaying)
+	{
+		_sailSource.Play();
+	}
+	if(!_turbineController.IsTurning() && _sailSource.isPlaying)
+	{
 		_sailSource.Stop();
 	}
 }
-function playSoundFromList(list:AudioClip[], source:AudioSource)
+function playSoundFromList(list:AudioClip[], source:AudioSource, seek:int = 0)
 {
 	source.clip = list[Mathf.Round(Random.Range(0, list.Length))];
 	source.Play();
+	source.timeSamples = Random.Range(0, seek);
 }
